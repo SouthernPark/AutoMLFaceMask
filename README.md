@@ -1,6 +1,8 @@
 # AutoMLFaceMask
 
-# I.DataSet For AutoML
+[![standard-readme compliant](https://img.shields.io/badge/readme%20style-standard-brightgreen.svg?style=flat-square)](https://github.com/RichardLitt/standard-readme)
+
+## I.DataSet For AutoML
   (1) Where I get this data?  
   I get the picture with face mush and without face mask from Kaggle.  
   https://www.kaggle.com/dhruvmak/face-mask-detection  
