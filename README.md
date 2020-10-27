@@ -1,5 +1,20 @@
 # AutoMLFaceMask
 
+# I.DataSet For AutoML
+  (1) Where I get this data?  
+  I get the picture with face mush and without face mask from Kaggle.  
+  https://www.kaggle.com/dhruvmak/face-mask-detection  
+  There are a lot of pictures in this dataset. However, I just use 200 pictures (100 with mask and 100 without) to reduce the time and cost used in AutoML training.   
+
+  (2) How do I upload these picture and train the module using AutoML?  
+   You can look at this google tutorial:  
+   https://cloud.google.com/vision/automl/docs/containers-gcs-tutorial  
+   You can watch this vedio for more help:  
+   https://www.youtube.com/watch?v=mMw1lleOeUA&t=483s  
+   
+   (3) Use the trained module online or offLine?  
+   You can either host the tr
+
 下载pre-built CPU container  
 export CPU_DOCKER_GCR_PATH=gcr.io/cloud-devrel-public-resources/gcloud-container-1.14.0:latest  
 sudo docker pull ${CPU_DOCKER_GCR_PATH}  
