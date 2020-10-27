@@ -37,4 +37,4 @@ def container_predict(image_file_path, image_key, port_number=8501):
     response = requests.post(url, data=json.dumps(instances))
     print(response.json())
 
-container_predict("with_face_mask_test.png", "1")
+container_predict("/home/l2848919007/AutoMLFaceMask/with_face_mask_test.png", "1")
