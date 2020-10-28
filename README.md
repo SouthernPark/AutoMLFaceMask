@@ -3,8 +3,8 @@
 [![standard-readme compliant](https://img.shields.io/badge/readme%20style-standard-brightgreen.svg?style=flat-square)](https://github.com/RichardLitt/standard-readme)
 
 ## Table of Contents
-- [DataSet For AutoML](#DataSet For AutoML)
-- [Using AutoML to train a module](#Using AutoML to train a module)
+- [DataSet For AutoML](#I.DataSet For AutoML)
+- [Using AutoML to train a module](#II.Using AutoML to train a module)
 - [Export the trained module](#Export the trained module and Copy it to local dir)
 - [Containerize the trained module](#Deploy the trained module to a pre-built CPU docker)
 - [Elastic your service using kubernetes](#Elastic your service using kubernetes)
