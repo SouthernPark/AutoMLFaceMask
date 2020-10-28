@@ -4,7 +4,7 @@
 
 ## Table of Contents
 - [DataSet For AutoML](#DataSet For AutoML)
-- [Using AutoML to train a module](#II.Using AutoML to train a module)
+- [Using AutoML to train a module](#Using AutoML to train a module)
 - [Export the trained module](#Export the trained module and Copy it to local dir)
 - [Containerize the trained module](#Deploy the trained module to a pre-built CPU docker)
 - [Elastic your service using kubernetes](#Elastic your service using kubernetes)
@@ -18,7 +18,7 @@
     https://www.kaggle.com/dhruvmak/face-mask-detection  
           
   There are a lot of pictures in this dataset. However, I just use 200 pictures (100 with mask and 100 without) to reduce the time and cost used in AutoML training.   
-## II.Using AutoML to train a module
+## Using AutoML to train a module
   >(2) How do I upload these picture and train the module using AutoML?  
     You can look at this google tutorial or watch a youtube video for more help:  
           
@@ -32,7 +32,7 @@
    In this project, we have achieved both methods.  
    And in the latter passage, we will mainly foucus on how to deploy the offline module because it is a little bit harder.  
    
-## II.Export the trained module and Copy it to local dir
+## Export the trained module and Copy it to local dir
    >(1) Export the trained module to google bucket 
    After you trained the edge module, you can export it to your google cloud bucket.  
       
@@ -46,7 +46,7 @@
       To grep my file to the local:  
       gsutil cp <bucket_location> <local_dir>  
       
-## III. Deploy the trained module to a pre-built CPU docker 
+## Deploy the trained module to a pre-built CPU docker 
    >(1) Download the pre-built CPU docker image from gcp container registry    
    Google has created a docker image which can help us do prediction if we can deploy the module into the container.  
       
@@ -106,7 +106,7 @@
         b. push your image:
         docker push <the_name_of_your_image>
         
-## IV. Elastic your service using kubernetes  
+## Elastic your service using kubernetes  
   In this section, we want to put deploy our docker image into k8s, so that we can elasticly scale our service.  
     
     >(1) Default setting
@@ -141,7 +141,7 @@
         kubectl get services
         (you may need sometime until the external url shows up)
         
-## IV. Other commands that you might need
+## Other commands that you might need
   
   >(1)k8s
       
