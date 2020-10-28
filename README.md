@@ -3,22 +3,22 @@
 [![standard-readme compliant](https://img.shields.io/badge/readme%20style-standard-brightgreen.svg?style=flat-square)](https://github.com/RichardLitt/standard-readme)
 
 ## Table of Contents
-- [DataSet For AutoML](#DataSet For AutoML)
-- [Using AutoML to train a module](#Using AutoML to train a module)
-- [Export the trained module](#Export the trained module and Copy it to local dir)
-- [Containerize the trained module](#Deploy the trained module to a pre-built CPU docker)
+- [DataSet](#dataSet)
+- [Using AutoML to train a module](#Using_AutoML_to_train_a_module)
+- [Export the trained module](#Export_the_trained_module_and_Copy_it_to_local_dir)
+- [Containerize the trained module](#Deploy_the_trained_module_to_a_pre_built_CPU_docker)
 - [Elastic your service using kubernetes](#Elastic your service using kubernetes)
 - [Other commands that you might need](#Other commands that you might need)
 
 
-## DataSet For AutoML
+## DataSet
   > Where I get this data?  
     I get the picture with face mush and without face mask from Kaggle.  
   
     https://www.kaggle.com/dhruvmak/face-mask-detection  
           
   There are a lot of pictures in this dataset. However, I just use 200 pictures (100 with mask and 100 without) to reduce the time and cost used in AutoML training.   
-## Using AutoML to train a module
+## Using_AutoML_to_train_a_module
   >(2) How do I upload these picture and train the module using AutoML?  
     You can look at this google tutorial or watch a youtube video for more help:  
           
@@ -32,7 +32,7 @@
    In this project, we have achieved both methods.  
    And in the latter passage, we will mainly foucus on how to deploy the offline module because it is a little bit harder.  
    
-## Export the trained module and Copy it to local dir
+## Export_the_trained_module_and_Copy_it_to_local_dir
    >(1) Export the trained module to google bucket 
    After you trained the edge module, you can export it to your google cloud bucket.  
       
@@ -46,7 +46,7 @@
       To grep my file to the local:  
       gsutil cp <bucket_location> <local_dir>  
       
-## Deploy the trained module to a pre-built CPU docker 
+## Deploy_the_trained_module_to_a_pre_built_CPU_docker 
    >(1) Download the pre-built CPU docker image from gcp container registry    
    Google has created a docker image which can help us do prediction if we can deploy the module into the container.  
       
