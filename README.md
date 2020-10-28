@@ -99,6 +99,7 @@
         
 ## IV. Elastic your service using kubernetes  
   In this section, we want to put deploy our docker image into k8s, so that we can elasticly scale our service.  
+    
     >(1) Default setting
     
         a. firstly, you need to set your project to default:
