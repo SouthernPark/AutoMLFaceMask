@@ -110,7 +110,7 @@
         c.if you haven't enabled your k8s API, you can find help from link below:  
         https://cloud.google.com/kubernetes-engine/docs/how-to/creating-a-zonal-cluster  
         
-    >(2) Creating container cluster 
+   >(2) Creating container cluster 
         
         a. Create a cluster with 3 nodes:
         gcloud container clusters create <give-name-to-your-cluster> --num-nodes 3
@@ -124,9 +124,44 @@
         Here I just attached my file to this githug dir.
         You can use it for your project by change the value of 'image'. (you jsut need to copy the path of you docker image from gcp container registry)
         
+        d. start the deployment using .yaml file
+        kubectl create -f face_mask_k8s.yaml
         
+        e. get the service url
+        kubectl get services
+        (you may need sometime until the external url shows up)
         
-        
+## IV. Other commands that you might need
+  
+  >(1)k8s
+      
+      delete a deployment:
+      kubectl delete -f <path_of_the_yaml_file>
+      
+      list the cluster you have created:
+      gcloud container clusters list
+      
+      delete one cluster you have already created:
+      gcloud container clusters delete <cluster_name>
+      
+  >(2)Linux
+      
+      delete one file:
+      rm <name_of_file>
+      
+      delete a dir:
+      rm -r <name_of_dir>
+      
+      delete a git dir:
+      rm -rf <name_of_dir>
+      
+  >(3)GitHub
+      
+      pus your project to GitHub:
+      git push -u origin main
+      
+      
+  
 6. 将训练好的模型部署到pre-built CPU container 容器当中  
   (2) 启动下载的container, 重新命名container为serving_base  
         docker run -d --name serving_base gcr.io/cloud-devrel-public-resources/gcloud-container-1.14.0  
