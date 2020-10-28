@@ -7,8 +7,8 @@
 - [Using AutoML to train a module](#Using_AutoML_to_train_a_module)
 - [Export the trained module](#Export_the_trained_module_and_Copy_it_to_local_dir)
 - [Containerize the trained module](#Deploy_the_trained_module_to_a_pre_built_CPU_docker)
-- [Elastic your service using kubernetes](#Elastic your service using kubernetes)
-- [Other commands that you might need](#Other commands that you might need)
+- [Elastic your service using kubernetes](#Elastic_your_service_using_kubernetes)
+- [Other commands that you might need](#Other_commands_that_you_might_need)
 
 
 ## DataSet
@@ -106,7 +106,7 @@
         b. push your image:
         docker push <the_name_of_your_image>
         
-## Elastic your service using kubernetes  
+## Elastic_your_service_using_kubernetes  
   In this section, we want to put deploy our docker image into k8s, so that we can elasticly scale our service.  
     
     >(1) Default setting
@@ -141,7 +141,7 @@
         kubectl get services
         (you may need sometime until the external url shows up)
         
-## Other commands that you might need
+## Other_commands_that_you_might_need
   
   >(1)k8s
       
