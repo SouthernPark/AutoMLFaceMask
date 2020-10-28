@@ -3,7 +3,7 @@
 [![standard-readme compliant](https://img.shields.io/badge/readme%20style-standard-brightgreen.svg?style=flat-square)](https://github.com/RichardLitt/standard-readme)
 
 ## Table of Contents
-- [DataSet For AutoML](#I.DataSet For AutoML)
+- [DataSet For AutoML](#DataSet For AutoML)
 - [Using AutoML to train a module](#II.Using AutoML to train a module)
 - [Export the trained module](#Export the trained module and Copy it to local dir)
 - [Containerize the trained module](#Deploy the trained module to a pre-built CPU docker)
@@ -11,7 +11,7 @@
 - [Other commands that you might need](#Other commands that you might need)
 
 
-## I.DataSet For AutoML
+## DataSet For AutoML
   > Where I get this data?  
     I get the picture with face mush and without face mask from Kaggle.  
   
