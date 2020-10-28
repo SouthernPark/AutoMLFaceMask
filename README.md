@@ -45,7 +45,7 @@
         sudo docker pull ${CPU_DOCKER_GCR_PATH}  
      
      
-    >(2) run the docker image and put the module inside the docker container  
+   >(2) run the docker image and put the module inside the docker container  
     
         run the docker image and name it as "serving_base":
         docker run -d --name serving_base gcr.io/cloud-devrel-public-resources/gcloud-container-1.14.0
@@ -62,19 +62,19 @@
         exit from docker container:  
         exit
         
-    >(3) put the trainer AutoML module in to the container  
+   >(3) put the trainer AutoML module in to the container  
     
         docker cp <you module location> serving_base:/tmp/mounted_model/0001
         For example:
         docker cp `pwd`/serving_dir/face_mask_model/1/saved_model.pb serving_base:/tmp/mounted_model/0001
         
-    >(4) commit the container so that it can become an image 
+   >(4) commit the container so that it can become an image 
     
         docker commit serving_base <name_of_you_image>
         For example:
         docker commit serving_base face_mask_serving
         
-     >(5) Run the container and test
+   >(5) Run the container and test
         
         Run the container:
         docker run -p 8501:8501 -t face_mask_serving &
@@ -84,12 +84,12 @@
         You need to specify the absolute image path that you want to predict.  
         And specify the key of the image such as 1,2 ...  
         
-     >(6) Close the container 
+   >(6) Close the container 
         
         docker kill <container_id>
         docker rm <container_id>
         
-     >(7) push the image to the container registry of gcp
+   >(7) push the image to the container registry of gcp
      
         Before you push your imag, you must tag it in a formal format:    
         docker tag <you_image> gcr.io/<your_project_id>/<your_image>:v0.1.0
