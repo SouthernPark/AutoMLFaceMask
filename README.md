@@ -4,17 +4,17 @@
 
 ## I.DataSet For AutoML
   >(1) Where I get this data?  
-  I get the picture with face mush and without face mask from Kaggle.  
+    I get the picture with face mush and without face mask from Kaggle.  
   
-          https://www.kaggle.com/dhruvmak/face-mask-detection  
+    https://www.kaggle.com/dhruvmak/face-mask-detection  
           
   There are a lot of pictures in this dataset. However, I just use 200 pictures (100 with mask and 100 without) to reduce the time and cost used in AutoML training.   
 
   >(2) How do I upload these picture and train the module using AutoML?  
-       You can look at this google tutorial or watch a youtube video for more help:  
-            
-            https://cloud.google.com/vision/automl/docs/containers-gcs-tutorial
-            https://www.youtube.com/watch?v=mMw1lleOeUA&t=483s  
+    You can look at this google tutorial or watch a youtube video for more help:  
+          
+    https://cloud.google.com/vision/automl/docs/containers-gcs-tutorial  
+    https://www.youtube.com/watch?v=mMw1lleOeUA&t=483s  
             
    
    >(3) Use the trained module online or offLine?  
@@ -22,6 +22,15 @@
    You can also download the trained the module to the gcp bucket and deploy the module to a pre-built container which is used to fit the trained module to do prediction.  
    In this project, we have achieved both methods.  
    And in the latter passage, we will mainly foucus on how to deploy the offline module because it is a little bit harder.  
+   >(4) Export the trained module  
+   After you trained the edge module, you can export it to your google cloud bucket.  
+   Link below shows how you can export your module to a pre-defined google cloud bucket.  
+   
+      https://cloud.google.com/vision/automl/docs/containers-gcs-tutorial#export-model
+      
+   Link for gustil:
+   
+      gs://facemaskmodule/model-export/icn/tf_saved_model-faceMaskDT2_20201027092610-2020-10-27T15:07:04.392Z/
 
 下载pre-built CPU container  
 export CPU_DOCKER_GCR_PATH=gcr.io/cloud-devrel-public-resources/gcloud-container-1.14.0:latest  
