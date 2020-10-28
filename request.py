@@ -32,7 +32,7 @@ def container_predict(image_file_path, image_key, port_number=8501):
     # This example shows sending requests in the same server that you start
     # docker containers. If you would like to send requests to other servers,
     # please change localhost to IP of other servers.
-    url = 'http://localhost:{}/v1/models/default:predict'.format(port_number)
+    url = 'http://34.70.152.43:{}/v1/models/default:predict'.format(port_number)
 
     response = requests.post(url, data=json.dumps(instances))
     print(response.json())

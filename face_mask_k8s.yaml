@@ -1,0 +1,33 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: face-mask-model-deployment
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: face-mask-model-server
+  template:
+    metadata:
+      labels:
+        app: face-mask-model-server
+    spec:
+      containers:
+      - name: face-mask-model-container
+        image: gcr.io/bigqueryml-293607/face_mask_serving@sha256:9063a70e1e7e9da4acec7ca7e6212acc69c2b33cdd032af9a86667fb9ea1a450
+        ports:
+        - containerPort: 8501
+---
+apiVersion: v1
+kind: Service
+metadata:
+  labels:
+    run: face-mask-model-service
+  name: face-mask-model-service
+spec:
+  ports:
+  - port: 8501
+    targetPort: 8501
+  selector:
+    app: face-mask-model-server
+  type: LoadBalancer
