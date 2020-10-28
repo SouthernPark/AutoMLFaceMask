@@ -47,19 +47,19 @@
      
    >(2) run the docker image and put the module inside the docker container  
     
-        run the docker image and name it as "serving_base":
+        a. run the docker image and name it as "serving_base":
         docker run -d --name serving_base gcr.io/cloud-devrel-public-resources/gcloud-container-1.14.0
         
-        enter into the docker container:
+        b. enter into the docker container:
         docker exec -it <container id>  /bin/bash
         
-        make dir under the tmp dir: 
+        c. make dir under the tmp dir: 
         cd tmp
         mkdir mounted_model
         mkdir 0001
         (You must make the dir one by one, or it will fail)
         
-        exit from docker container:  
+        d. exit from docker container:  
         exit
         
    >(3) put the trainer AutoML module in to the container  
@@ -76,10 +76,10 @@
         
    >(5) Run the container and test
         
-        Run the container:
+        a. Run the container:
         docker run -p 8501:8501 -t face_mask_serving &
         
-        Test the container:  
+        b. Test the container:  
         use the request.py in this github dir to do REST request.  
         You need to specify the absolute image path that you want to predict.  
         And specify the key of the image such as 1,2 ...  
@@ -91,11 +91,40 @@
         
    >(7) push the image to the container registry of gcp
      
-        Before you push your imag, you must tag it in a formal format:    
+        a. Before you push your imag, you must tag it in a formal format:    
         docker tag <you_image> gcr.io/<your_project_id>/<your_image>:v0.1.0
         
-        push your image:
+        b. push your image:
         docker push <the_name_of_your_image>
+        
+## IV. Elastic your service using kubernetes  
+  In this section, we want to put deploy our docker image into k8s, so that we can elasticly scale our service.  
+    >(1) Default setting
+    
+        a. firstly, you need to set your project to default:
+        gcloud auth login --project <your_project_id> 
+      
+        b.set the defaul zone:  
+        gcloud config set compute/zone us-central1-b
+        
+        c.if you haven't enabled your k8s API, you can find help from link below:  
+        https://cloud.google.com/kubernetes-engine/docs/how-to/creating-a-zonal-cluster  
+        
+    >(2) Creating container cluster 
+        
+        a. Create a cluster with 3 nodes:
+        gcloud container clusters create <give-name-to-your-cluster> --num-nodes 3
+        
+        b. set default cluster and get credential
+        gcloud config set container/cluster <your_cluster_name>
+        gcloud container clusters get-credentials <your_cluster_name>
+        (you can use 'gcloud container clusters list' to look for the clusters you have created)
+        
+        c. create a .yaml file to specify the configuration of a deployment file 
+        Here I just attached my file to this githug dir.
+        You can use it for your project by change the value of 'image'. (you jsut need to copy the path of you docker image from gcp container registry)
+        
+        
         
         
 6. 将训练好的模型部署到pre-built CPU container 容器当中  
