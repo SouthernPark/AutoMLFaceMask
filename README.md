@@ -26,11 +26,11 @@
    After you trained the edge module, you can export it to your google cloud bucket.  
    Link below shows how you can export your module to a pre-defined google cloud bucket.  
    
-      https://cloud.google.com/vision/automl/docs/containers-gcs-tutorial#export-model
+   https://cloud.google.com/vision/automl/docs/containers-gcs-tutorial#export-model
       
    Link for gustil:
    
-      gs://facemaskmodule/model-export/icn/tf_saved_model-faceMaskDT2_20201027092610-2020-10-27T15:07:04.392Z/
+   gs://facemaskmodule/model-export/icn/tf_saved_model-faceMaskDT2_20201027092610-2020-10-27T15:07:04.392Z/
 
 下载pre-built CPU container  
 export CPU_DOCKER_GCR_PATH=gcr.io/cloud-devrel-public-resources/gcloud-container-1.14.0:latest  
