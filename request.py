@@ -1,7 +1,7 @@
 import base64
 import io
 import json
-
+import os
 import requests
 
 
@@ -33,8 +33,8 @@ def container_predict(image_file_path, image_key, port_number=8501):
     # docker containers. If you would like to send requests to other servers,
     # please change localhost to IP of other servers.
     url = 'http://34.70.152.43:{}/v1/models/default:predict'.format(port_number)
-
+    
     response = requests.post(url, data=json.dumps(instances))
     print(response.json())
 
-container_predict("/home/l2848919007/AutoMLFaceMask/with_face_mask_test.png", "1")
+container_predict(os.getcwd()+"/with_face_mask_test.png", "1")
