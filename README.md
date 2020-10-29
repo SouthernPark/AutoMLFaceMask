@@ -8,6 +8,7 @@
 - [Export the trained module](#Export_the_trained_module_and_Copy_it_to_local_dir)
 - [Containerize the trained module](#Deploy_the_trained_module_to_a_pre_built_CPU_docker)
 - [Elastic your service using kubernetes](#Elastic_your_service_using_kubernetes)
+- [load_test](#load_test)
 - [Other commands that you might need](#Other_commands_that_you_might_need)
 
 
@@ -141,6 +142,20 @@
         kubectl get services
         (you may need sometime until the external url shows up)
         
+## Load_test
+  >(1) download Locust python package
+  
+      pip install locust
+      
+  >(2) run the command below:
+      
+      locust -f load_test.py --host http://34.70.152.43:8501
+      
+  >(3) open the port created by locust
+    
+      http://0.0.0.0:8089
+      
+      
 ## Other_commands_that_you_might_need
   
   >(1)k8s
@@ -170,13 +185,22 @@
       pus your project to GitHub:
       git push -u origin main
       
-  >(4)virtual env and install requests python package
-      
+  >(4)install python pip and env
+       
       sudo apt-get install python3-pip
       sudo pip3 install virtualenv 
+      
+  >(5)create and active the virtual env
+  
+      a. change dir to AutoMLFaceMask 
+      cd AutoMLFaceMask
+      
+      b. create and activate
       python3 -m venv ~/.AutoMLFaceMask 
       source ~/.AutoMLFaceMask/bin/activate
       source ~/.AutoMLFaceMask/bin/activate
       
-       
+
+      
+      
       
