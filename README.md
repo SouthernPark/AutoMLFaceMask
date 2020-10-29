@@ -170,6 +170,13 @@
       pus your project to GitHub:
       git push -u origin main
       
+  >(4)virtual env and install requests python package
+      
+      sudo apt-get install python3-pip
+      sudo pip3 install virtualenv 
+      python3 -m venv ~/.AutoMLFaceMask 
+      source ~/.AutoMLFaceMask/bin/activate
+      source ~/.AutoMLFaceMask/bin/activate
       
        
       
