@@ -9,7 +9,7 @@
   
   Load Test Video:
   
-    https://www.youtube.com/watch?v=4aFEz_v3Qdk
+    [![Alt text](https://img.youtube.com/vi/4aFEz_v3Qdk/0.jpg)](https://www.youtube.com/watch?v=4aFEz_v3Qdk)
   
   
 ## Table of Contents
