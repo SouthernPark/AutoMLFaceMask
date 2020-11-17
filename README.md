@@ -1,6 +1,9 @@
 # AutoMLFaceMask
+[![standard-readme compliant](https://img.shields.io/badge/readme%20style-standard-brightgreen.svg?style=flat-square)](https://github.com/RichardLitt/standard-readme)  
 
-[![standard-readme compliant](https://img.shields.io/badge/readme%20style-standard-brightgreen.svg?style=flat-square)](https://github.com/RichardLitt/standard-readme)
+[![Alt text](https://github.com/SouthernPark/Screenshots/blob/master/faceMask.jpg)  
+
+
 # Overview
   This project consists the process of building a containerized machine learning face mask detection prediction model and deploy it in a scalable, and elastic platform. 
   The elastic scale-up performance is tested via Load Test with Locust, this project starts with 1 container or endpoint and verify 2 or more inference endpoints scale     up to 1K requests per second.  
