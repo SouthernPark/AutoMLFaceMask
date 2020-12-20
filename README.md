@@ -36,6 +36,10 @@
     I get the picture with face mush and without face mask from Kaggle.  
   
     https://www.kaggle.com/dhruvmak/face-mask-detection  
+    Dataset is stored here:  
+    https://pan.baidu.com/s/1-INSHX7zRQaMzHKXL1d3tQ   
+    Extraction Code: 2kdv    
+
           
   There are a lot of pictures in this dataset. However, I just use 200 pictures (100 with mask and 100 without) to reduce the time and cost used in AutoML training.   
 ## Using_AutoML_to_train_a_module
