@@ -1,5 +1,10 @@
 # AutoMLFaceMask
+
 [![standard-readme compliant](https://img.shields.io/badge/readme%20style-standard-brightgreen.svg?style=flat-square)](https://github.com/RichardLitt/standard-readme)  
+
+  WorkFlow of our project:  
+  ![Alt text](https://github.com/SouthernPark/Screenshots/blob/master/workflow.png)  
+
 
 [![Alt text](https://github.com/SouthernPark/Screenshots/blob/master/faceMask.jpg)
 
@@ -18,8 +23,7 @@
   Presentation video of this project:  
   [![Alt text](https://img.youtube.com/vi/wVYh4XJ2sJU/0.jpg)](https://www.youtube.com/watch?v=wVYh4XJ2sJU)  
  
-  WorkFlow of our project:  
-  ![Alt text](https://github.com/SouthernPark/Screenshots/blob/master/workflow.png)  
+
   
 ## Table of Contents
 - [DataSet](#dataSet)
